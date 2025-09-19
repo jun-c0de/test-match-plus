@@ -1,0 +1,101 @@
+.inner.admin-contact {
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: #333;
+    }
+
+    .contact-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        >li {
+            // flex: 1;
+            width: clamp(250px, 30%, 400px);
+            background-color: #fff;
+            padding: 1.5rem;
+            box-shadow: 0 2px 6px #00000025;
+            border-radius: 8px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            line-height: 2;
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 2px 12px #00000048;
+            }
+
+            .key {
+                display: inline-block;
+                color: #333;
+                font-weight: 600;
+                padding-right: .5rem;
+            }
+
+            .value {
+                display: inline-block;
+                padding-left: .5rem;
+            }
+
+            .status {
+                background-color: #eee;
+                padding: 0 2rem;
+                color: #fff;
+                font-size: .8rem;
+                display: inline-flex;
+                text-transform: uppercase;
+                margin: 1rem 0 0 1rem;
+                border-radius: 1rem;
+            }
+
+            .s-in-progress {
+                background-color: #fd660f; // 주황
+            }
+
+            .s-pending {
+                background-color: #2563eb; // 파랑
+            }
+
+            .s-completed {
+                background-color: #16a34a; // 초록
+            }
+
+            .message {
+                padding: 1rem;
+                background-color: #eee;
+                border-radius: .3rem;
+            }
+
+            .btns {
+                margin-top: 1rem;
+                gap: .5rem;
+                display: flex;
+
+                button {
+                    flex: 1;
+                    color: #fff;
+                    border-radius: 6px;
+                    transition: background 0.2s ease, transform 0.1s ease;
+
+                    &:first-child {
+                        background-color: #3b82f6;
+
+                        &:hover {
+                            background-color: #2d6dd4;
+                        }
+                    }
+
+                    &:last-child {
+                        background-color: #f87171;
+
+                        &:hover {
+
+                            background-color: #d15252;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
